@@ -79,7 +79,7 @@ export default function Cards() {
           justifyContent: 'space-between', 
           flexDirection: { xs: 'column', sm: 'row' }  // Stack vertically on xs screens, row on sm and larger
         }}>
-          <Paper  sx={{ flex: '1 1 25%', p: 2, background: 'linear-gradient(135deg, #CCF1CF 0%, #768B77 100%)', color: 'white', display: 'flex', flexDirection: 'column', alignItems: 'center', borderRadius: 2 }}>
+          <Paper  sx={{ flex: '1 1 25%', p: 2, background: 'linear-gradient(135deg, #ec765b 0%, #E84420 100%)', color: 'white', display: 'flex', flexDirection: 'column', alignItems: 'center', borderRadius: 2 }}>
             <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: 48, height: 48, backgroundColor: 'black', borderRadius: 2, mb: 1 }}>
               <PeopleIcon fontSize="large" />
             </Box>

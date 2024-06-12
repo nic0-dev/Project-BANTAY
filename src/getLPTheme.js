@@ -142,7 +142,6 @@ const getDesignTokens = (mode) => ({
       'Fira Sans',
       'Droid Sans',
       'Helvetica Neue',
-      'sans-serif',
     ].join(','),
     h1: {
       fontSize: 60,
