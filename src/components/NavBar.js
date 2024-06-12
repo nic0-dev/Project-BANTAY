@@ -54,9 +54,9 @@ function AppAppBar({ mode, toggleColorMode }) {
                 })}
             >
             {/* Dashboard Title */}
-            <Box sx={{ display: 'flex', alignItems: 'center', gap: '20px', color: isDarkMode ? '#ffffff' : '#000000' }}>
-                <SpaceDashboardIcon />
-                <Typography varient="h6" fontWeight='bold'>Dashboard</Typography>
+            <Box sx={{ display: { xs: 'none', sm: 'flex' }, alignItems: 'center', gap: '20px', color: isDarkMode ? '#ffffff' : '#000000' }}>
+              <SpaceDashboardIcon />
+              <Typography variant="h6" fontWeight="bold">Dashboard</Typography>
             </Box>
 
             {/* Spacer */}
@@ -64,15 +64,15 @@ function AppAppBar({ mode, toggleColorMode }) {
 
             {/* Project Name */}
             <Box sx={{ display: 'flex', alignItems: 'center', gap: '15px', color: isDarkMode ? '#ffffff' : '#000000', textAlign: 'center', flexGrow: 1, justifyContent: 'center' }}>
-                <Box component="img" src={logo} alt="Logo" sx={{ height: 40 }} />
-                <Typography variant="h5" fontWeight='bold'>PROJECT BANTAY</Typography>
+              <Box component="img" src={logo} alt="Logo" sx={{ height: { xs: 25, sm: 40 } }} />
+              <Typography variant="h5" fontWeight="bold" sx={{ fontSize: '1.5rem' }}>PROJECT BANTAY</Typography>
             </Box>
 
             {/* Spacer */}
             <Box sx={{ flexGrow: 1 }} />
 
             {/* Theme and User Icons */}
-            <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 0.5, alignItems: 'center', color: isDarkMode ? '#ffffff' : '#000000' }}>
+            <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: { xs: 0.2, sm: 0.5 }, alignItems: 'center', color: isDarkMode ? '#ffffff' : '#000000' }}>
               <ToggleColorMode mode={mode} toggleColorMode={toggleColorMode} />
               <IconButton color="inherit">
                 <AccountCircleIcon />
@@ -88,7 +88,10 @@ function AppAppBar({ mode, toggleColorMode }) {
                   <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'end', flexGrow: 1 }}>
                     <ToggleColorMode mode={mode} toggleColorMode={toggleColorMode} />
                   </Box>
-                  Account 1
+                  <Box sx={{ display: 'flex', alignItems: 'center', gap: '20px', color: isDarkMode ? '#ffffff' : '#000000' }}>
+                    <SpaceDashboardIcon />
+                    <Typography variant="h6" fontWeight="bold">Dashboard</Typography>
+                  </Box>
                   <Divider />
                 </Box>
               </Drawer>
