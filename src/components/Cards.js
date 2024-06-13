@@ -67,18 +67,14 @@ export default function Cards() {
   };
 
   return (
-    <Box component="section" mt={15} py={2}>
+    <Box component="section" sx={{mt: {xs: 10, md: 15}}} py={2}>
       <Box sx={{ maxWidth: 'lg', mx: 'auto', px: 4 }}>
-        <Box sx={{ display: 'flex', mb: 2, alignItems: 'center'}}>
-          <Box sx={{mr: 2}}><Typography variant="h5">Current Reading: </Typography></Box>
-          <Typography color='#918E97' variant="body1">(Last Updated: {currentData.lastUpdated})</Typography>
+        <Box sx={{ display: 'flex', mb: {xs: 4, md: 2}, alignItems: 'center'}}>
+          <Box sx={{mr: {xs: 5, md: 2}}}><Typography variant="h5" sx={{ fontSize: { xs: '1.15rem', sm: '1.25rem' }}}>Current Reading: </Typography></Box>
+          <Typography color='#918E97' variant="body1" sx={{ fontSize: { xs: '0.75rem', sm: '1rem' }}}>(Last Updated: {currentData.lastUpdated})</Typography>
         </Box>
-        <Box sx={{ 
-          display: 'flex', 
-          gap: 2, 
-          justifyContent: 'space-between', 
-          flexDirection: { xs: 'column', sm: 'row' }  // Stack vertically on xs screens, row on sm and larger
-        }}>
+
+        <Box sx={{ display: 'flex', gap: 2, justifyContent: 'space-between', flexDirection: { xs: 'column', sm: 'row' }}}>
           <Paper  sx={{ flex: '1 1 25%', p: 2, background: 'linear-gradient(135deg, #ec765b 0%, #E84420 100%)', color: 'white', display: 'flex', flexDirection: 'column', alignItems: 'center', borderRadius: 2 }}>
             <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: 48, height: 48, backgroundColor: 'black', borderRadius: 2, mb: 1 }}>
               <PeopleIcon fontSize="large" />
