@@ -89,11 +89,11 @@ function AppAppBar({ mode, toggleColorMode }) {
                   <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'end', flexGrow: 1 }}>
                     <ToggleColorMode mode={mode} toggleColorMode={toggleColorMode} />
                   </Box>
-                  <Box sx={{ display: 'flex', alignItems: 'center', gap: '20px', mb: 4, color: isDarkMode ? '#ffffff' : '#000000' }}>
+                  <Box sx={{ display: 'flex', alignItems: 'center', gap: '20px', color: isDarkMode ? '#ffffff' : '#000000' }}>
                     <SpaceDashboardIcon />
                     <Typography variant="h6" fontWeight="bold">Dashboard</Typography>
                   </Box>
-                  <Divider />
+                  <Divider sx={{ my: 2 }}/>
                   <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
                   <Link color="text.secondary" href="https://www.behance.net/gallery/193530817/Mark-Design-Portfolio">
                     Portfolio
