@@ -19,7 +19,7 @@ function Copyright() {
   return (
     <Typography variant="body2" color="text.secondary" mt={1}>
       {'Copyright © '}
-      <Link href="https://mui.com/">Mark Cagas&nbsp;</Link>
+      <Link href="#">Mark Cagas&nbsp;</Link>
       {new Date().getFullYear()}
     </Typography>
   );
@@ -117,13 +117,13 @@ export default function Footer() {
           <Typography variant="body2" fontWeight={600}>
             Project Bantay
           </Typography>
-          <Link color="text.secondary" href="#">
+          <Link color="text.secondary" href="https://www.behance.net/gallery/193530817/Mark-Design-Portfolio">
             About me
           </Link>
-          <Link color="text.secondary" href="#">
+          <Link color="text.secondary" href="https://www.behance.net/gallery/193530817/Mark-Design-Portfolio">
             Portfolio
           </Link>
-          <Link color="text.secondary" href="#">
+          <Link color="text.secondary" href={`${process.env.PUBLIC_URL}/CAGAS_MARK_NICHOLAS_RESUME.pdf`}>
             Resume
           </Link>
         </Box>
@@ -181,7 +181,7 @@ export default function Footer() {
         >
           <IconButton
             color="inherit"
-            href="https://github.com/mui"
+            href="https://github.com/nic0-dev"
             aria-label="GitHub"
             sx={{ alignSelf: 'center' }}
           >
@@ -189,15 +189,15 @@ export default function Footer() {
           </IconButton>
           <IconButton
             color="inherit"
-            href="https://twitter.com/MaterialUI"
-            aria-label="Behance"
+            href="#"
+            aria-label="Facebook"
             sx={{ alignSelf: 'center' }}
           >
             <FacebookIcon />
           </IconButton>
           <IconButton
             color="inherit"
-            href="https://www.linkedin.com/company/mui/"
+            href="https://www.linkedin.com/in/marknicholascagas/"
             aria-label="LinkedIn"
             sx={{ alignSelf: 'center' }}
           >
