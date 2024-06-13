@@ -11,6 +11,7 @@ import Typography from '@mui/material/Typography';
 import Drawer from '@mui/material/Drawer';
 import MenuIcon from '@mui/icons-material/Menu';
 import ToggleColorMode from './ToggleColorMode';
+import Link from '@mui/material/Link';
 
 import SpaceDashboardIcon from '@mui/icons-material/SpaceDashboard';
 import logo from './logo.png';
@@ -88,11 +89,25 @@ function AppAppBar({ mode, toggleColorMode }) {
                   <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'end', flexGrow: 1 }}>
                     <ToggleColorMode mode={mode} toggleColorMode={toggleColorMode} />
                   </Box>
-                  <Box sx={{ display: 'flex', alignItems: 'center', gap: '20px', color: isDarkMode ? '#ffffff' : '#000000' }}>
+                  <Box sx={{ display: 'flex', alignItems: 'center', gap: '20px', mb: 4, color: isDarkMode ? '#ffffff' : '#000000' }}>
                     <SpaceDashboardIcon />
                     <Typography variant="h6" fontWeight="bold">Dashboard</Typography>
                   </Box>
                   <Divider />
+                  <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+                  <Link color="text.secondary" href="https://www.behance.net/gallery/193530817/Mark-Design-Portfolio">
+                    Portfolio
+                  </Link>
+                  <Link color="text.secondary" href={`${process.env.PUBLIC_URL}/CAGAS_MARK_NICHOLAS_RESUME.pdf`}>
+                    Resume
+                  </Link>
+                  <Link color="text.secondary" href="https://www.linkedin.com/in/marknicholascagas/">
+                    LinkedIn
+                  </Link>
+                  <Link color="text.secondary" href="https://github.com/nic0-dev">
+                    Github
+                  </Link>
+                  </Box>
                 </Box>
               </Drawer>
             </Box>
