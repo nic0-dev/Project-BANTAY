@@ -19,11 +19,10 @@ export default function DisplayTable() {
     onValue(dataRef, (snapshot) => {
       const data = snapshot.val();
       if (data) {
-        // Convert data object to an array, sort it by timestamp, and get the 5 most recent entries
+        // Convert data object to an array and sort it by timestamp
         const sortedData = Object.entries(data)
           .map(([id, value]) => ({ id, ...value }))
-          .sort((a, b) => b.id - a.id)
-          .slice(0, 5);
+          .sort((a, b) => b.id - a.id);
         setSensorData(sortedData);
       }
     });
@@ -47,8 +46,8 @@ export default function DisplayTable() {
           <Typography variant="h5">User Data: </Typography>
         </Box>
 
-        <TableContainer component={Paper}>
-          <Table sx={{ minWidth: 650 }} aria-label="sensor data table">
+        <TableContainer component={Paper} sx={{ maxHeight: 300 }}>
+          <Table sx={{ minWidth: 650 }} aria-label="sensor data table" stickyHeader>
             <TableHead>
               <TableRow>
                 <TableCell align="left">UID</TableCell>
@@ -59,7 +58,7 @@ export default function DisplayTable() {
               </TableRow>
             </TableHead>
             <TableBody>
-            {sensorData.map((row) => (
+              {sensorData.map((row) => (
                 <TableRow key={row.id}>
                   <TableCell component="th" scope="row">{row.RFID}</TableCell>
                   <TableCell align="left">{''}</TableCell>
@@ -68,13 +67,6 @@ export default function DisplayTable() {
                   <TableCell align="left">{formatTimestamp(row.id)}</TableCell>
                 </TableRow>
               ))}
-              {sensorData.length > 5 && (
-                <TableRow>
-                  <TableCell colSpan={5} align="center">
-                    ...
-                  </TableCell>
-                </TableRow>
-              )}
             </TableBody>
           </Table>
         </TableContainer>
