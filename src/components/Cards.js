@@ -70,8 +70,8 @@ export default function Cards() {
     <Box component="section" sx={{mt: {xs: 10, md: 15}}} py={2}>
       <Box sx={{ maxWidth: 'lg', mx: 'auto', px: 4 }}>
         <Box sx={{ display: 'flex', mb: {xs: 4, md: 2}, alignItems: 'center'}}>
-          <Box sx={{mr: {xs: 5, md: 2}}}><Typography variant="h5" sx={{ fontSize: { xs: '1.15rem', sm: '1.25rem' }}}>Current Reading: </Typography></Box>
-          <Typography color='#918E97' variant="body1" sx={{ fontSize: { xs: '0.75rem', sm: '1rem' }}}>(Last Updated: {currentData.lastUpdated})</Typography>
+          <Box sx={{mr: 2}}><Typography variant="h5" sx={{ fontSize: { xs: '1rem', sm: '1.25rem' }}}>Current Reading: </Typography></Box>
+          <Typography color='#918E97' variant="body1" sx={{ fontSize: { xs: '0.6rem', sm: '1rem' }}}>(Last Updated: {currentData.lastUpdated})</Typography>
         </Box>
 
         <Box sx={{ display: 'flex', gap: 2, justifyContent: 'space-between', flexDirection: { xs: 'column', sm: 'row' }}}>
