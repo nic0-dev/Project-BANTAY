@@ -69,7 +69,7 @@ export default function Cards() {
   return (
     <Box component="section" sx={{mt: {xs: 10, md: 15}}} py={2}>
       <Box sx={{ maxWidth: 'lg', mx: 'auto', px: 4 }}>
-        <Box sx={{ display: 'flex', mb: {xs: 4, md: 2}, alignItems: 'center'}}>
+        <Box sx={{ display: 'flex', mb: 2, alignItems: 'center'}}>
           <Box sx={{mr: 2}}><Typography variant="h5" sx={{ fontSize: { xs: '1rem', sm: '1.25rem' }}}>Current Reading: </Typography></Box>
           <Typography color='#918E97' variant="body1" sx={{ fontSize: { xs: '0.6rem', sm: '1rem' }}}>(Last Updated: {currentData.lastUpdated})</Typography>
         </Box>
